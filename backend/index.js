@@ -51,9 +51,6 @@ app.post("/convertFile", upload.single("file"), (req, res, next) => {
   }
 });
 
-app.get("/",(req,res)=>{
-  console.log("listen")
-})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
