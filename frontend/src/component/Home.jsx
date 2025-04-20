@@ -24,7 +24,7 @@ function Home() {
       const formData=new FormData()
       formData.append("file",selectFile)
       try{
-        const response = await axios.post("https://convertapp.onrender.com", formData, {
+        const response =await axios.post("https://convertapp.onrender.com/convert", formData, {
           responseType: "blob",
         });
         
