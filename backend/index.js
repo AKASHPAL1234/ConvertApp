@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
-
+const port = 3000;
 const multer = require("multer");
 const cors = require ("cors");
 const doctopdf = require("docx-pdf");
@@ -20,7 +19,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.post("/convert", upload.single("file"), (req, res, next) => {
+app.post("/convertFile", upload.single("file"), (req, res, next) => {
   try {
     if (!req.file) {
       return res.status(400).json({
@@ -56,7 +55,5 @@ app.post("/convert", upload.single("file"), (req, res, next) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
-
-
 
 
