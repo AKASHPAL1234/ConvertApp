@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { FaFileWord } from "react-icons/fa6";
 import axios from 'axios';
 
@@ -24,7 +24,7 @@ function Home() {
       const formData=new FormData()
       formData.append("file",selectFile)
       try{
-        const response =await axios.post("https://convertapp.onrender.com/api/convert", formData, {
+        const response =await axios.post("https://convertapp.onrender.com/convert", formData, {
           responseType: "blob",
         });
         
